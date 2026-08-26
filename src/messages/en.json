@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "siteName": "LinkYou",
+    "defaultTitle": "LinkYou | Software Development, AI & Cybersecurity Solutions",
+    "defaultDescription": "LinkYou is a Toronto-based technology company delivering custom software, AI, cybersecurity, and digital transformation solutions for enterprise and government organizations across Canada.",
+    "titleTemplate": "%s | LinkYou"
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "viewProject": "View project",
+    "knowMore": "Know more",
+    "backToHome": "Back to home"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "whyLinkyou": "Why LinkYou",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "toggleLabel": "Toggle color theme",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "locale": {
+    "label": "Language",
+    "switchLabel": "Change language",
+    "en": "English",
+    "ar": "العربية"
+  },
+  "announcementBar": {
+    "message": "Need help scaling your software?",
+    "cta": "Contact us now",
+    "dismissLabel": "Dismiss announcement"
+  },
+  "hero": {
+    "eyebrow": "Software · AI · Cybersecurity",
+    "title": "Build Digital Experiences That Move Your Business Forward",
+    "titleLines": ["WE BUILD", "YOUR", "SOFTWARE."],
+    "subtitle": "LinkYou helps businesses turn ideas into scalable digital products through software development, AI, cybersecurity, and modern technology solutions.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Explore Our Projects",
+    "badges": {
+      "engineering": "Software Engineering",
+      "ai": "Artificial Intelligence",
+      "cloud": "Cloud & Infrastructure",
+      "security": "Cybersecurity"
+    },
+    "statLine": "307 projects delivered for enterprise & government clients across Canada"
+  },
+  "trustedBy": {
+    "eyebrow": "Our Clients",
+    "title": "Trusted by Organizations Across Canada",
+    "subtitle": "From municipal and federal government to national telecom carriers, organizations rely on LinkYou to build and maintain critical digital systems.",
+    "caption": "Trusted by organizations across Canada"
+  },
+  "aboutTeaser": {
+    "backgroundWord": "LINKYOU",
+    "intro": "LinkYou.ca is a software consultancy",
+    "body": "We partner with businesses and public institutions across Canada to design, build, and support software that holds up under real-world demands — from first prototype to long-term maintenance.",
+    "imageAlt": "The LinkYou team at work"
+  },
+  "about": {
+    "eyebrow": "About LinkYou",
+    "title": "A Technology Partner Built for the Long Term",
+    "lead": "LinkYou is a Toronto-based software development and technology company helping organizations design, build, secure, and scale their digital products.",
+    "paragraphs": [
+      "We work across the full technology stack — software engineering, artificial intelligence, cybersecurity, mobile and web development, and digital marketing — to help clients turn ideas into dependable, scalable systems.",
+      "Our team has delivered work for municipal and federal government bodies, national telecom carriers, and private enterprises, which means every product we build is engineered to enterprise standards of security, reliability, and performance.",
+      "We believe a project isn't finished at launch. Our engineers stay engaged well beyond delivery, because software that matters needs a partner who stands behind it."
+    ],
+    "supportBadge": "Our commitment",
+    "supportTitle": "One Year of Free Support, Included",
+    "supportBody": "Every project we deliver includes a full year of complimentary support. We monitor, maintain, and fine-tune your website or application after launch so it keeps running smoothly — at no additional cost.",
+    "statsTitle": "LinkYou by the numbers",
+    "statsSubtitle": "A snapshot of the work behind every project we deliver.",
+    "stats": {
+      "hours": "Work hours invested",
+      "coffee": "Cups of coffee brewed",
+      "projects": "Projects executed"
+    }
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "End-to-End Technology Services",
+    "subtitle": "From strategy to long-term support, LinkYou delivers the full lifecycle of digital product development.",
+    "learnMore": "Learn more",
+    "items": {
+      "ai": {
+        "title": "AI Services",
+        "description": "Custom AI models, natural language processing, and computer vision solutions that automate operations and unlock intelligent insights."
+      },
+      "cybersecurity": {
+        "title": "Cyber Security Services",
+        "description": "Protect your systems, data, and users with security assessments, monitoring, and hardened development practices."
+      },
+      "web-development": {
+        "title": "Website Development and Design",
+        "description": "Modern, high-performance websites and web platforms designed around your brand and built to scale."
+      },
+      "mobile-development": {
+        "title": "Mobile App Development and Design",
+        "description": "Native and cross-platform mobile applications engineered for smooth, reliable user experiences."
+      },
+      "maintenance-support": {
+        "title": "Maintenance and Technical Support",
+        "description": "Ongoing monitoring, updates, and technical support that keep your digital products running smoothly."
+      },
+      "digital-marketing": {
+        "title": "Digital Marketing",
+        "description": "Data-driven digital marketing strategies that help your brand reach and engage the right audience."
+      },
+      "fraud-management": {
+        "title": "Fraud Management Services",
+        "description": "Solutions that help identify, prevent, and manage fraudulent activity across digital channels."
+      },
+      "telecom-consultancy": {
+        "title": "Telecom Consultancy",
+        "description": "Specialized consulting for telecom providers, drawing on direct experience with major carriers."
+      }
+    }
+  },
+  "aiServices": {
+    "eyebrow": "Artificial Intelligence",
+    "title": "Intelligent Solutions Powered by Artificial Intelligence",
+    "intro": "LinkYou harnesses AI to transform business operations through automation, intelligent insights, and adaptive technologies.",
+    "pillars": {
+      "modelDev": {
+        "title": "Custom AI Model Development",
+        "body": "Machine learning algorithms and predictive analytics tailored to your specific business requirements.",
+        "items": []
+      },
+      "nlp": {
+        "title": "Natural Language Processing",
+        "body": "Language-driven solutions built for real business use cases.",
+        "items": [
+          "Chatbots",
+          "Sentiment analysis",
+          "Automated customer service",
+          "Context-aware language processing"
+        ]
+      },
+      "vision": {
+        "title": "Computer Vision",
+        "body": "Visual intelligence applied where it matters most.",
+        "items": [
+          "Quality control",
+          "Security monitoring",
+          "Image recognition",
+          "Automated document data extraction"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "title": "Work That Speaks for Itself",
+    "subtitle": "A look at some of the digital products LinkYou has designed, built, and shipped.",
+    "filters": {
+      "all": "All Projects",
+      "web": "Web Development",
+      "mobile": "Mobile Applications"
+    },
+    "categoryLabels": {
+      "web": "Web Development",
+      "mobile": "Mobile Application"
+    },
+    "items": {
+      "halal-stage": {
+        "name": "Halal Stage",
+        "description": "A digital platform designed and delivered by LinkYou. Full project details available on request."
+      },
+      "2sooq": {
+        "name": "2Sooq",
+        "description": "A comprehensive halal food platform that brings the taste of home wherever users are. 2Sooq connects users with certified halal restaurants and home-cooked meals, with a focus on halal quality."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Have You Ever Seen This Level of Customer Satisfaction?",
+    "subtitle": "Don't just take our word for it — here's what our clients say about us.",
+    "items": {
+      "abdulaziz": {
+        "name": "Abdulaziz Al-Dargh",
+        "role": "CEO, Al-Katris Cement Islakhi Company",
+        "quote": "LinkYou rebuilt our operations platform from the ground up and delivered it on schedule. Their team understood our compliance requirements immediately and the system has run without a hiccup since launch."
+      },
+      "ahmed": {
+        "name": "Ahmed Safouq",
+        "role": "Marketing Director, Al-Imamat Automotive Company",
+        "quote": "Working with LinkYou felt like adding an in-house engineering team. They translated our campaign goals into a fast, polished web app that our customers actually enjoy using."
+      },
+      "salman": {
+        "name": "Salman Al-Faifi",
+        "role": "Founder & CEO, Group 33 Manufacturing",
+        "quote": "From the first planning call to post-launch support, LinkYou was thorough and transparent. The security-first approach they took with our data gave us real peace of mind."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Our Process",
+    "title": "Stages of Executing Your Project",
+    "subtitle": "You're just 7 steps away from launching your dream project — and the 7th step ensures it runs smoothly.",
+    "steps": {
+      "research": {
+        "number": "01",
+        "title": "Research & Analysis",
+        "body": "We begin each project with comprehensive research and analysis to understand the client's needs and goals. We identify the target audience, study competitors, and determine the best technical and functional solutions."
+      },
+      "planning": {
+        "number": "02",
+        "title": "Planning & Strategy",
+        "body": "We create a detailed project roadmap defining timelines, milestones, deliverables, and resource allocation."
+      },
+      "design": {
+        "number": "03",
+        "title": "UI/UX Design",
+        "body": "We create intuitive, visually appealing interfaces aligned with the client's brand identity and target audience."
+      },
+      "development": {
+        "number": "04",
+        "title": "Development",
+        "body": "Our developers transform designs into scalable, secure, high-performance digital products using modern technologies and best practices."
+      },
+      "testing": {
+        "number": "05",
+        "title": "Testing & QA",
+        "body": "We perform comprehensive quality assurance across devices, browsers, and usage scenarios."
+      },
+      "launch": {
+        "number": "06",
+        "title": "Launch & Deployment",
+        "body": "We manage the deployment process and technical requirements required to move the project into production."
+      },
+      "support": {
+        "number": "07",
+        "title": "Maintenance & Support",
+        "body": "We provide ongoing support, maintenance, updates, security patches, and technical assistance — including a full year of free support."
+      }
+    }
+  },
+  "whyLinkyou": {
+    "eyebrow": "Why LinkYou",
+    "title": "A Partner That Builds, Secures, and Stays",
+    "subtitle": "Here's what clients can expect when they work with LinkYou.",
+    "points": {
+      "experience": {
+        "title": "Experienced Technology Team",
+        "body": "A team with hands-on experience delivering projects for government bodies, telecom carriers, and private enterprises."
+      },
+      "fullCycle": {
+        "title": "Full-Cycle Software Development",
+        "body": "From research and design through development, testing, and deployment, we manage the entire product lifecycle."
+      },
+      "ai": {
+        "title": "AI Capabilities",
+        "body": "Practical, business-focused AI — from predictive models to natural language and computer vision solutions."
+      },
+      "security": {
+        "title": "Cybersecurity Expertise",
+        "body": "Security-minded development practices that help protect your systems, data, and users."
+      },
+      "enterprise": {
+        "title": "Enterprise-Oriented Solutions",
+        "body": "Systems engineered to the standards required by government and large-scale organizations."
+      },
+      "support": {
+        "title": "One Year of Free Support",
+        "body": "Every project includes twelve months of complimentary post-launch support at no additional cost."
+      },
+      "scalable": {
+        "title": "Scalable Solutions",
+        "body": "Architectures designed to grow with your business, not slow it down."
+      },
+      "partnership": {
+        "title": "Long-Term Technical Partnership",
+        "body": "We aim to be a long-term technology partner, not a one-off vendor."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Build Your Next Digital Experience?",
+    "subtitle": "Let's turn your idea into a secure, scalable, and successful digital product.",
+    "button": "Get Started"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's Start a Conversation",
+    "subtitle": "Tell us about your project and our team will get back to you shortly.",
+    "infoTitle": "Contact information",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your full name",
+      "email": "Email address",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "+1 (___) ___-____",
+      "projectType": "Project type",
+      "projectTypePlaceholder": "Select a project type",
+      "projectTypes": {
+        "web": "Website development",
+        "mobile": "Mobile app development",
+        "ai": "AI services",
+        "security": "Cybersecurity",
+        "marketing": "Digital marketing",
+        "support": "Maintenance & support",
+        "other": "Other"
+      },
+      "message": "Project details",
+      "messagePlaceholder": "Tell us a bit about your project and goals",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Enter a valid email address",
+        "tooShort": "Please add a few more details"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "LinkYou your business success and help it move forward.",
+    "quickLinksTitle": "Quick Links",
+    "quickLinks": {
+      "home": "Home",
+      "blog": "Our Blog",
+      "contact": "Get in Touch",
+      "partners": "Partners",
+      "technologies": "Technologies"
+    },
+    "aboutTitle": "About",
+    "about": {
+      "aboutUs": "About Us",
+      "whyLinkyou": "Why LinkYou",
+      "projects": "Projects",
+      "services": "Services"
+    },
+    "contactTitle": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Looks like this page took a wrong turn.",
+    "body": "The page you're looking for doesn't exist or may have moved.",
+    "cta": "Back to Home"
+  },
+  "error": {
+    "eyebrow": "Something went wrong",
+    "title": "We hit an unexpected error.",
+    "body": "Please try again, or return to the homepage.",
+    "retry": "Try again",
+    "cta": "Back to Home"
+  }
+}
