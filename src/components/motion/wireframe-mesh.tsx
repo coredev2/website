@@ -3,11 +3,7 @@
 import { useEffect, useRef } from "react";
 import type * as THREE from "three";
 import { cn } from "@/lib/utils";
-import {
-  usePrefersReducedMotion,
-  useIsCoarsePointer,
-  useIsSmallViewport,
-} from "@/lib/prefers-reduced-motion";
+import { usePrefersReducedMotion, useIsCoarsePointer } from "@/lib/prefers-reduced-motion";
 
 /**
  * An undulating wireframe terrain, built from explicit horizontal/vertical
@@ -28,11 +24,7 @@ export function WireframeMesh() {
   const containerRef = useRef<HTMLDivElement>(null);
   const reducedMotion = usePrefersReducedMotion();
   const coarsePointer = useIsCoarsePointer();
-  // Phones can't sustain a 3D WebGL scene without dropping frames and
-  // draining battery, and the mesh is purely decorative — skip it entirely
-  // below the tablet breakpoint in favor of the static CSS fallback below.
-  const smallViewport = useIsSmallViewport();
-  const skipScene = reducedMotion || smallViewport;
+  const skipScene = reducedMotion;
 
   useEffect(() => {
     const container = containerRef.current;
