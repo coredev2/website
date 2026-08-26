@@ -25,3 +25,7 @@ export function usePrefersReducedMotion(): boolean {
 export function useIsCoarsePointer(): boolean {
   return useMediaQuery("(pointer: coarse)");
 }
+
+export function useIsSmallViewport(): boolean {
+  return useMediaQuery("(max-width: 767px)");
+}

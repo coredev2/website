@@ -15,7 +15,10 @@ export function TrustedBy() {
         </p>
 
         <div className="group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] py-8 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-          <div className="flex w-max animate-marquee items-center gap-16 group-hover:[animation-play-state:paused] rtl:[animation-direction:reverse]">
+          <div
+            dir="ltr"
+            className="flex w-max animate-marquee items-center gap-16 group-hover:[animation-play-state:paused] rtl:[animation-direction:reverse]"
+          >
             {track.map((client, index) => (
               <div
                 key={`${client.id}-${index}`}
@@ -26,6 +29,8 @@ export function TrustedBy() {
                   alt={client.name}
                   width={480}
                   height={200}
+                  sizes="144px"
+                  priority={index < clients.length}
                   className="h-full w-full object-contain"
                 />
               </div>

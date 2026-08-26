@@ -2,7 +2,12 @@
 
 import { useEffect, useRef } from "react";
 import type * as THREE from "three";
-import { usePrefersReducedMotion, useIsCoarsePointer } from "@/lib/prefers-reduced-motion";
+import { cn } from "@/lib/utils";
+import {
+  usePrefersReducedMotion,
+  useIsCoarsePointer,
+  useIsSmallViewport,
+} from "@/lib/prefers-reduced-motion";
 
 /**
  * An undulating wireframe terrain, built from explicit horizontal/vertical
@@ -23,13 +28,20 @@ export function WireframeMesh() {
   const containerRef = useRef<HTMLDivElement>(null);
   const reducedMotion = usePrefersReducedMotion();
   const coarsePointer = useIsCoarsePointer();
+  // Phones can't sustain a 3D WebGL scene without dropping frames and
+  // draining battery, and the mesh is purely decorative — skip it entirely
+  // below the tablet breakpoint in favor of the static CSS fallback below.
+  const smallViewport = useIsSmallViewport();
+  const skipScene = reducedMotion || smallViewport;
 
   useEffect(() => {
     const container = containerRef.current;
-    if (!container) return;
+    if (!container || skipScene) return;
 
     let cancelled = false;
     let cleanup: (() => void) | undefined;
+    let visible = true;
+    let tabVisible = document.visibilityState !== "hidden";
 
     import("three").then((THREE) => {
       if (cancelled || !container) return;
@@ -127,20 +139,45 @@ export function WireframeMesh() {
       window.addEventListener("resize", resize);
 
       let frame = 0;
-      if (!reducedMotion) {
-        const start = performance.now();
-        const tick = () => {
-          const elapsed = (performance.now() - start) / 1000;
-          updateGeometry(elapsed * 0.4);
-          renderer.render(scene, camera);
-          frame = requestAnimationFrame(tick);
-        };
+      const start = performance.now();
+      const tick = () => {
+        if (!visible || !tabVisible) {
+          frame = 0;
+          return;
+        }
+        const elapsed = (performance.now() - start) / 1000;
+        updateGeometry(elapsed * 0.4);
+        renderer.render(scene, camera);
         frame = requestAnimationFrame(tick);
-      }
+      };
+      const startLoop = () => {
+        if (!frame) frame = requestAnimationFrame(tick);
+      };
+      startLoop();
+
+      // Pause the render loop entirely while the hero is scrolled out of
+      // view or the tab is backgrounded — it's a background decoration, not
+      // something that needs to keep animating off-screen.
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          visible = entry.isIntersecting;
+          if (visible) startLoop();
+        },
+        { threshold: 0 }
+      );
+      observer.observe(container);
+
+      const handleVisibilityChange = () => {
+        tabVisible = document.visibilityState !== "hidden";
+        if (tabVisible) startLoop();
+      };
+      document.addEventListener("visibilitychange", handleVisibilityChange);
 
       cleanup = () => {
         if (frame) cancelAnimationFrame(frame);
         window.removeEventListener("resize", resize);
+        document.removeEventListener("visibilitychange", handleVisibilityChange);
+        observer.disconnect();
         [...rowLines, ...colLines].forEach((line) => {
           line.geometry.dispose();
           (line.material as THREE.Material).dispose();
@@ -154,7 +191,28 @@ export function WireframeMesh() {
       cancelled = true;
       cleanup?.();
     };
-  }, [reducedMotion, coarsePointer]);
+  }, [coarsePointer, skipScene]);
+
+  if (skipScene) {
+    return (
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-[image:var(--gradient-primary)] opacity-25" />
+        <div className="hud-grid-bg absolute inset-0 opacity-40" />
+        <div
+          className={cn(
+            "absolute -top-16 start-[-5%] h-96 w-96 rounded-full bg-[var(--accent-bright)]/70 blur-3xl",
+            !reducedMotion && "animate-float"
+          )}
+        />
+        <div
+          className={cn(
+            "absolute top-1/4 end-[-5%] h-80 w-80 rounded-full bg-[var(--accent-primary)]/80 blur-3xl",
+            !reducedMotion && "animate-float [animation-delay:-3s]"
+          )}
+        />
+      </div>
+    );
+  }
 
   return (
     <div
