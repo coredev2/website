@@ -18,24 +18,24 @@ export function TrustedBy() {
           dir="ltr"
           className="group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] py-8 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]"
         >
-          <div className="flex w-max animate-marquee items-center gap-16 group-hover:[animation-play-state:paused] rtl:[animation-direction:reverse]">
+          <div className="flex w-max animate-marquee items-center gap-10 group-hover:[animation-play-state:paused] rtl:[animation-direction:reverse] sm:gap-16">
             {track.map((client, index) => (
               <div
                 key={`${client.id}-${index}`}
-                className="flex w-36 shrink-0 flex-col items-center justify-center gap-2"
+                className="flex w-24 shrink-0 flex-col items-center justify-center gap-1.5 sm:w-36 sm:gap-2"
               >
-                <div className="flex h-12 w-full items-center justify-center">
+                <div className="flex h-8 w-full items-center justify-center sm:h-12">
                   <Image
                     src={client.logo}
                     alt={client.name}
                     width={480}
                     height={200}
-                    sizes="144px"
+                    sizes="(min-width: 640px) 144px, 96px"
                     priority={index < clients.length}
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <span className="text-center text-xs font-medium text-[var(--text-muted)]">
+                <span className="text-center text-[11px] font-medium text-[var(--text-muted)] sm:text-xs">
                   {client.name}
                 </span>
               </div>
