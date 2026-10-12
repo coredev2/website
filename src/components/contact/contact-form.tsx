@@ -24,7 +24,7 @@ const projectTypeKeys = [
 ] as const;
 
 const inputClasses =
-  "w-full rounded-xl border border-border-strong bg-bg px-4 py-3 text-sm text-text placeholder:text-text-muted transition-all focus:border-brand-primary focus:shadow-[0_0_0_3px_color-mix(in_oklab,var(--color-brand-light)_25%,transparent)] focus:outline-none";
+  "w-full rounded-xl border border-border-strong bg-bg px-4 py-3 text-base text-text placeholder:text-text-muted transition-all focus:border-brand-primary focus:shadow-[0_0_0_3px_color-mix(in_oklab,var(--color-brand-light)_25%,transparent)] focus:outline-none sm:text-sm";
 
 export function ContactForm() {
   const t = useTranslations("contact.form");
@@ -156,7 +156,12 @@ export function ContactForm() {
         />
       </Field>
 
-      <Button type="submit" size="lg" disabled={status === "submitting"} className="w-fit">
+      <Button
+        type="submit"
+        size="lg"
+        disabled={status === "submitting"}
+        className="w-full sm:w-fit"
+      >
         {status === "submitting" ? t("submitting") : t("submit")}
         {status !== "submitting" ? (
           <ArrowIcon className="h-4 w-4 rtl:rotate-180" aria-hidden="true" />

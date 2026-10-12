@@ -43,11 +43,11 @@ export function AnnouncementBar() {
 
   return (
     <div
-      className="relative flex items-center justify-center gap-3 px-4 py-2.5 text-center text-sm font-semibold text-white [background:var(--gradient-primary)]"
+      className="relative flex items-center justify-center gap-3 px-4 py-2.5 text-center text-xs font-semibold text-white [background:var(--gradient-primary)] sm:text-sm"
       role="region"
       aria-label={t("message")}
     >
-      <p className="text-pretty">
+      <p className="text-pretty px-6 sm:px-0">
         {t("message")}{" "}
         <Link href="/contact" className="underline underline-offset-2 hover:no-underline">
           {t("cta")}
