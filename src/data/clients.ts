@@ -6,7 +6,7 @@ export type Client = {
 
 export const clients: Client[] = [
   { id: "toronto", name: "City of Toronto", logo: "/images/clients/fit/toronto.png" },
-  { id: "ontario", name: "Ontario Government", logo: "/images/clients/fit/canada.png" },
+  { id: "ontario", name: "Ontario Government", logo: "/images/clients/fit/ontario.png" },
   { id: "transport-canada", name: "Transport Canada", logo: "/images/clients/fit/canada.png" },
   { id: "cfia", name: "Canadian Food Inspection Agency", logo: "/images/clients/fit/canada.png" },
   { id: "isc", name: "Indigenous Services Canada", logo: "/images/clients/fit/canada.png" },
